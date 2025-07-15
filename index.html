@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafy Portfolio Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/background-video-1.mp4" type="video/mp4">
+    </video>
+    <audio id="background-music" loop>
+        <source src="assets/about you.mp3" type="audio/mpeg">
+    </audio>
+    <div id="splash-screen" class="screen active">
+        <h1 class="game-title">Rafy Portfolio</h1>
+        <a href="#" id="start-button" class="press-start">PRESS START</a>
+    </div>
+
+    <div id="main-menu" class="screen">
+        <div class="menu-box">
+            <h2 class="menu-title">Main Menu</h2>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="#" class="menu-item" data-target="about-screen"><i class="fas fa-user"></i> Character Profile</a></li>
+                    <li><a href="#" class="menu-item" data-target="projects-screen"><i class="fas fa-gamepad"></i> Select Level</a></li>
+                    <li><a href="#" class="menu-item" data-target="skills-screen"><i class="fas fa-star"></i> Skill Tree</a></li>
+                    <li><a href="#" class="menu-item" data-target="contact-screen"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="#" class="back-button" data-target="splash-screen">Back</a>
+    </div>
+
+    <div id="projects-screen" class="screen">
+        <h2 class="screen-title">Select Level</h2>
+        <div class="project-list">
+            <!-- Projects will be loaded here by JavaScript -->
+        </div>
+        <a href="#" class="back-button" data-target="main-menu">Back to Menu</a>
+    </div>
+
+    <div id="skills-screen" class="screen">
+        <h2 class="screen-title">Skill Tree</h2>
+        <div class="skill-tree">
+            <!-- Skills will be loaded here -->
+        </div>
+        <a href="#" class="back-button" data-target="main-menu">Back to Menu</a>
+    </div>
+
+    <div id="about-screen" class="screen">
+        <h2 class="screen-title">Character Profile</h2>
+        <div class="profile-card">
+            <div class="profile-image">
+                <br>
+                <img src="assets/profile/foto.jpg" alt="Rafy Profile Picture"> <br> <br>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/r.raaff_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Raafi2Ra" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/maulana-ra-afi-457414232/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/raaffiy/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h3>Maulana Ra'afi</h3>
+                <p style="font-size: 15px;">Intermediate Developer</p>
+                <br> <br>
+                <div class="stats">
+                    <div class="stat">
+                        <img src="assets/profile/cs.png" alt="C#" height="55" width="55">
+                        <img src="assets/profile/cpp.png" alt="Cpp" height="55" width="55">
+                        <img src="assets/profile/java.png" alt="Java" height="55" width="55">
+                        <img src="assets/profile/js.png" alt="JavaScript" height="55" width="55">
+                        <img src="assets/profile/html.png" alt="html" height="55" width="55">
+                        <img src="assets/profile/css.png" alt="css" height="55" width="55">
+                        <img src="assets/profile/python.png" alt="Python" height="55" width="55">
+                        <img src="assets/profile/php.png" alt="PHP" height="55" width="55">
+                        <img src="assets/profile/mysql.png" alt="MySQL" height="55" width="55">
+                        <img src="assets/profile/laravel.png" alt="Laravel" height="55" width="55">
+                        <img src="assets/profile/vbnet.png" alt="vbnet" height="55" width="55">
+                        <img src="assets/profile/kotlin.png" alt="kotlin" height="55" width="55">
+                        <img src="assets/profile/flutter.png" alt="flutter" height="55" width="55">
+                        <img src="assets/profile/postman.png" alt="postman" height="55" width="55">
+                    </div>
+                </div>
+                <br>
+                <p class="profile-bio">A passionate developer on a quest to build amazing and useful things. Always learning and leveling up.</p>
+            </div>
+        </div>
+        <a href="#" class="back-button" data-target="main-menu">Back to Menu</a>
+    </div>
+
+    <div id="contact-screen" class="screen">
+        <div class="contact-container">
+            <h2 class="screen-title">Quest Giver</h2>
+            <div class="contact-box">
+                <p>Greetings, traveler! Have a quest for me? Send a message.</p> <br> <br>
+                <form>
+                    <div class="input-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="Your message..." style="resize: none;"></textarea>
+                    </div>
+                    <button type="submit" class="send-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <a href="#" class="back-button" data-target="main-menu">Back to Menu</a>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <a href="#" id="modal-link" target="_blank">View Project</a>
+        </div>
+    </div>
+
+    <div class="music-controls-container">
+        <div id="music-prev" class="music-nav-button">&lt;&lt;</div>
+        <div id="music-control" class="music-control-button">
+            <span id="music-icon">&#9658;</span> <!-- Play icon -->
+        </div>
+        <div id="music-next" class="music-nav-button">&gt;&gt;</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
