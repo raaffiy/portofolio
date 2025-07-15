@@ -181,3 +181,26 @@ window.addEventListener("click", function (event) {
     }
 });
 
+const videos = [
+    document.getElementById('video1'),
+    document.getElementById('video2'),
+    document.getElementById('video3'),
+    document.getElementById('video4'),
+    document.getElementById('video5')
+];
+
+let currentIndex = 0;
+function switchVideo() {
+    // Sembunyikan semua video
+    videos.forEach(video => video.classList.remove('visible'));
+    // Tampilkan video saat ini
+    videos[currentIndex].classList.add('visible');
+    // Pindah ke video berikutnya (loop ke awal jika di akhir)
+    currentIndex = (currentIndex + 1) % videos.length;
+}
+
+// Jalankan pertama kali untuk memastikan video1 terlihat
+switchVideo();
+
+// Ganti video setiap 30 detik (30000 ms)
+setInterval(switchVideo, 30000);

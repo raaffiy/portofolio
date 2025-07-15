@@ -10,12 +10,37 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <video autoplay muted loop id="background-video">
+
+    <!-- Video 1 -->
+    <video autoplay muted loop id="video1" class="bg-video visible">
         <source src="assets/background-video-1.mp4" type="video/mp4">
     </video>
+    
+    <!-- Video 2 -->
+    <video autoplay muted loop id="video2" class="bg-video">
+        <source src="assets/background-video-2.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Video 3 -->
+    <video autoplay muted loop id="video3" class="bg-video">
+        <source src="assets/background-video-3.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Video 4 -->
+    <video autoplay muted loop id="video4" class="bg-video">
+        <source src="assets/background-video-4.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Video 5 -->
+    <video autoplay muted loop id="video5" class="bg-video">
+        <source src="assets/background-video-5.mp4" type="video/mp4">
+    </video>
+
+    <!-- Audio -->
     <audio id="background-music" loop>
         <source src="assets/about you.mp3" type="audio/mpeg">
     </audio>
+    
     <div id="splash-screen" class="screen active">
         <h1 class="game-title">Rafy Portfolio</h1>
         <a href="#" id="start-button" class="press-start">PRESS START</a>
