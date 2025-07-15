@@ -192,6 +192,8 @@ body {
     border: 4px solid #fff;
     padding: 2rem;
     box-shadow: 0 0 15px #0ff, 0 0 15px #f0f;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .input-group {
@@ -203,9 +205,27 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1rem;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
 }
 
+/* FIX: Input & Textarea full width */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    background-color: #222;
+    color: #fff;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+
+/* FIX: Make button same width as inputs */
 .send-button {
+    width: 100%;
+    /* Full width */
     font-family: 'Press Start 2P', cursive;
     font-size: 1.2rem;
     color: #fff;
@@ -214,6 +234,7 @@ body {
     padding: 0.8rem 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
 .send-button:hover {
