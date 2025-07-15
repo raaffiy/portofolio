@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const musicPrevButton = document.getElementById('music-prev');
 
     const musicPlaylist = [
+        'assets/music/about you.mp3',
         'assets/music/Nobody Gets Me.mp3',
         'assets/music/Kill Bill.mp3',
         'assets/music/Snooze.mp3',
         'assets/music/I Think They Call This Love.mp3',
-        'assets/music/about you.mp3',
         'assets/music/blue.mp3',
         'assets/music/You Be in My Heart.mp3'
     ];
