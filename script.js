@@ -156,3 +156,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+
+// Saat klik gambar galeri
+document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+    });
+});
+
+// Fungsi untuk tutup modal
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Tutup modal jika klik di luar gambar
+window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+

@@ -339,3 +339,130 @@ button:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Skill Tree */
+.skill-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 4px solid #fff;
+    padding: 2rem;
+    box-shadow: 0 0 15px #0ff, 0 0 15px #f0f;
+}
+
+/* Container Umum */
+.gallery-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border: 3px solid #fff;
+    box-shadow: 0 0 20px #0ff, 0 0 20px #f0f;
+    border-radius: 15px;
+}
+
+/* Judul Galeri */
+.gallery-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 10px #0ff;
+}
+
+/* Grid Galeri */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Gambar Galeri */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+/* Animasi Hover */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #0ff, 0 0 25px #f0f;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+/* Modal (Lightbox) */
+.imageModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Gambar dalam Modal */
+.image-modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff, 0 0 30px #f0f;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Tombol Close */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
+    z-index: 1000;
+}
+
+.close-btn:hover {
+    color: #ff007f;
+}
+

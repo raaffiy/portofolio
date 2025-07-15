@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <video autoplay muted loop id="background-video">
@@ -45,8 +46,56 @@
 
     <div id="skills-screen" class="screen">
         <h2 class="screen-title">Skill Tree</h2>
-        <div class="skill-tree">
-            <!-- Skills will be loaded here -->
+        <div class="gallery-container">
+            <div class="gallery-title">3D Design <br> <br> Animation Blender</div> <br>
+            <div class="gallery-grid">
+
+                <!-- mentahan -->
+                <div class="gallery-item">
+                    <img src="assets/blender/mentahan/hasil.png" alt="mentahan_1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/mentahan/hutan 2.png" alt="mentahan_2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/mentahan/hutan.png" alt="mentahan_3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/mentahan/Kelas.png" alt="mentahan_4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/mentahan/laut.png" alt="mentahan_5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/mentahan/Screenshot 2024-11-20 074905.png" alt="mentahan_6">
+                </div>
+
+                <!-- hasil -->
+                <div class="gallery-item">
+                    <img src="assets/blender/hasil/abstrak.png" alt="hasil_1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/hasil/gurun.png" alt="hasil_2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/hasil/kamar.jpg" alt="hasil_3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/hasil/totoro.png" alt="hasil_4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/hasil/Screenshot 2023-07-04 120713.png" alt="hasil_5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/blender/hasil/Soccer.png" alt="hasil_6">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal untuk Gambar -->
+        <div id="imageModal" class="imageModal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img class="image-modal-content" id="modalImage">
         </div>
         <a href="#" class="back-button" data-target="main-menu">Back to Menu</a>
     </div>
@@ -136,5 +185,8 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
 </body>
 </html>
